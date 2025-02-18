@@ -1,0 +1,77 @@
+
+  
+/* พื้นหลัง */
+body {
+    background-color: #000000;
+    color: #DCDCDC; /* สีข้อความ */
+    font-family: 'Impact', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* หัวข้อ */
+h1, h2, h3 {
+    color: #FF0000; /* ใช้สีแดงสดสำหรับหัวข้อ */
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.6); /* เงาให้ดูมีมิติ */
+}
+
+/* ปุ่ม */
+button {
+    background-color: #FF0000; /* สีแดง */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #8B0000; /* เปลี่ยนเป็นสีแดงเข้มเมื่อ hover */
+}
+
+/* เอฟเฟกต์เลือด */
+.blood-drip {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    opacity: 1;
+    animation: bloodDrip 2s infinite;
+}
+
+@keyframes bloodDrip {
+    0% { top: -50px; opacity: 1; }
+    100% { top: 100vh; opacity: 0; }
+}
+
+/* เพิ่มเลือดกระเซ็น */
+.blood-splash {
+    position: absolute;
+    background: url('blood-splash.png') no-repeat center center;
+    width: 100px;
+    height: 100px;
+    animation: bloodSplash 3s infinite;
+}
+
+@keyframes bloodSplash {
+    0% { top: -100px; opacity: 1; }
+    100% { top: 100vh; opacity: 0; }
+}
+
+/* ลิงก์ */
+a {
+    color: #FF0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ปรับความสวยงามเมื่อมีการโต้ตอบ */
+.container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
